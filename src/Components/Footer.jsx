@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="contact-item">
             <FaLinkedin className="footer-icon" />
             <a href="https://www.linkedin.com/in/rani-ambiger" target="_blank" rel="noreferrer">
-              linkedin.com/in/yourprofile
+              linkedin.com/in/rani-ambiger
             </a>
           </div>
           <div className="contact-item">
