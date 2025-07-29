@@ -14,11 +14,11 @@ const About = () => {
           <ul className="about-points">
             <li>
               <FaServer className="about-icon" />
-              <strong> Backend Developer:</strong> I specialize in building robust server-side logic using Java and Python, ensuring efficient data flow and security.
+              <strong> Backend Developer:</strong>  I love building the backbone of applications using Java and Python, ensuring they run smoothly, securely, and efficiently.
             </li>
             <li>
               <FaCode className="about-icon" />
-              <strong> Full Stack Developer:</strong> I craft seamless end-to-end web experiences, integrating front-end interfaces with scalable backend services.
+              <strong> Full Stack Developer:</strong> I enjoy turning ideas into full-fledged apps by crafting intuitive frontends and powerful backend logic.
             </li>
             <li>
               <FaRobot className="about-icon" />
