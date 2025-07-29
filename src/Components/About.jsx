@@ -1,5 +1,6 @@
 import React from 'react';
-import myImage from '../../public/last-day.jpg'; // Replace with your image path
+import myImage from '../../public/last-day.jpg';
+import { FaServer, FaCode, FaRobot } from 'react-icons/fa'; // Importing icons
 
 const About = () => {
   return (
@@ -12,13 +13,16 @@ const About = () => {
           <h2 className="about-title">Who Am I?</h2>
           <ul className="about-points">
             <li>
-              I am Rani, an MCA graduate who has been immersed in real-world software development with technologies like Java, Python, and React.
+              <FaServer className="about-icon" />
+              <strong> Backend Developer:</strong> I specialize in building robust server-side logic using Java and Python, ensuring efficient data flow and security.
             </li>
             <li>
-              My journey involves practical exposure to machine learning and full stack web/mobile applications that solve real user problems.
+              <FaCode className="about-icon" />
+              <strong> Full Stack Developer:</strong> I craft seamless end-to-end web experiences, integrating front-end interfaces with scalable backend services.
             </li>
             <li>
-              With curiosity driving me, I continuously explore new frameworks and tools to evolve as a tech-savvy and adaptable developer.
+              <FaRobot className="about-icon" />
+              <strong> Machine Learning Enthusiast:</strong> I enjoy exploring data-driven solutions with ML models, turning raw data into meaningful predictions.
             </li>
           </ul>
         </div>
