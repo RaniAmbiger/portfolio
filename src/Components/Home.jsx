@@ -1,5 +1,5 @@
 import React from 'react';
-import myPhoto from '../../public/graduation.jpg'; // Replace with your actual image file
+import myPhoto from '../assets/graduation.jpg'; // Replace with your actual image file
 
 const Home = () => {
   return (
@@ -18,7 +18,7 @@ const Home = () => {
           </div>
         </div>
         <div className="home-image-wrapper">
-          <img src={myPhoto} alt="Rani Ksambiger" className="home-image" />
+          <img src={myPhoto} alt="Rani Ambiger" className="home-image" />
         </div>
       </div>
     </section>

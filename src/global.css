@@ -1,14 +1,17 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f5f5f5;
   scroll-behavior: smooth;
+  width: 100%;
+  max-width: 1780px;
+  margin: auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 /* Navbar */
 .navbar {
-  background-color: #0b1a49; /* Match footer color */
+  background-color: #0b1a49;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -35,9 +38,39 @@ body {
 }
 
 .navbar-links a:hover {
-  color: #aaf0ff; /* Optional: match hover color with footer links */
+  color: #aaf0ff;
 }
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 24px;
+  }
 
+  .navbar-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-end; /* Align to left */
+    gap: 1px;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    width: 100%;
+  }
+
+  .navbar-links a {
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+  }
+}
 
 /* Section styles */
 section {
@@ -49,34 +82,15 @@ section {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-section h2 {
-  font-size: 28px;
-  margin-bottom: 16px;
-}
-
-.skills-list,
-.projects-section ul,
-.certificates-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  font-size: 18px;
-}
-
 /* Home Section */
 .home-section {
   padding: 4rem 2rem;
   background: linear-gradient(to right, #0f172a, #1e3a8a);
   color: white;
-  margin-top: 0; /* ✅ Ensure no top margin */
+  margin-top: 0;
   border: none;
   border-radius: 0;
 }
-
 
 .home-content {
   display: flex;
@@ -112,6 +126,8 @@ section h2 {
 
 .home-buttons {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1.2rem;
 }
 
@@ -124,6 +140,7 @@ section h2 {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
 .home-btn:hover {
@@ -150,22 +167,6 @@ section h2 {
 }
 
 /* About Section */
-
-.roles-container {
-  margin-top: 3rem;
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.role-card {
-  padding: 1.5rem;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-
 .about-section {
   padding: 4rem 2rem;
   background-color: #f9fafb;
@@ -177,7 +178,6 @@ section h2 {
   display: flex;
   gap: 3rem;
   max-width: 1200px;
-  height: 550px;
   width: 100%;
   background-color: #ffffff;
   padding: 2rem;
@@ -215,42 +215,38 @@ section h2 {
   color: #374151;
   font-size: 1.1rem;
   line-height: 1.8;
-  
 }
 
 .about-points li {
   margin-bottom: 1.5rem;
-  background-color: transparent;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   padding: 1rem;
   border-radius: 12px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-points li:hover {
-  background-color: #0b1a49; /* Dark royal blue */
+  background-color: #0b1a49;
   color: #ffffff;
   box-shadow: -12px 6px 20px rgba(11, 26, 73, 0.6), 6px 6px 10px rgba(11, 26, 73, 0.2);
 }
+
 .about-icon {
   margin-right: 8px;
-  color: #68a1f1; /* A soft dark tone */
+  color: #68a1f1;
   vertical-align: middle;
   font-size: 20px;
   padding-left: 20px;
 }
 
-
-/* Skill Section*/
-.skills-heading{
-    display: flex;
-  align-items: center;
-  justify-items: center;
-    padding-left: 300px;
-    font-size: 2.2rem;
+/* Skill Section */
+.skills-heading {
+  text-align: left;
+  font-size: 2.2rem;
   margin-bottom: 2rem;
   color: #1e3a8a;
-  text-align: left;
+  padding-left: 300px;
 }
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(4, 0.2fr);
@@ -259,7 +255,6 @@ section h2 {
   justify-items: center;
   padding: 2rem;
   padding-left: 270px;
-
 }
 
 .skill-item {
@@ -270,30 +265,26 @@ section h2 {
 .icon-bg {
   width: 90px;
   height: 90px;
-  background-color: #e0f2ff; /* light blue background */
+  background-color: #e0f2ff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
-  box-shadow: 6px 6px 10px rgba(30, 58, 138, 0.4); /* royal blue shadows */
+  box-shadow: 6px 6px 10px rgba(30, 58, 138, 0.4);
   transition: box-shadow 0.3s ease;
 }
 
 .icon-bg:hover {
-  box-shadow: 12px 6px 15px rgba(30, 58, 138, 0.6); /* darker shadow on hover */
+  box-shadow: 12px 6px 15px rgba(30, 58, 138, 0.6);
 }
 
 .skill-icon {
   font-size: 2.5rem;
-  color: #1e3a8a; /* dark royal blue */
+  color: #1e3a8a;
 }
 
-.empty-cell {
-  grid-column: span 1;
-}
-
-/* Education section */
+/* Education Section */
 .education-section {
   padding: 130px 200px;
 }
@@ -301,32 +292,38 @@ section h2 {
 .education-heading {
   font-size: 2.2rem;
   margin-bottom: 2rem;
-  margin-top: 1rem;
   color: #1e3a8a;
   text-align: left;
 }
 
 .education-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;               /* Center horizontally */
+  padding: 0 1rem;              /* Prevent horizontal overflow */
+  box-sizing: border-box;
 }
 
+
+/* Card styling */
 .education-card {
-  flex: 1 1 45%;
-  background-color: #001f4d; /* Dark royal blue */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  background-color: #001f4d;
   color: #ffffff;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.3s ease;
-  text-align: left; /* ✅ This aligns content to the left */
+  box-sizing: border-box;
 }
 
+
 .education-card:hover {
-  background-color: #003399; /* Slightly lighter royal blue on hover */
+  background-color: #003399;
   transform: translateY(-5px);
 }
 
@@ -335,7 +332,7 @@ section h2 {
   font-size: 1rem;
 }
 
-/* Project section */
+/* Project Section */
 .projects-section {
   padding: 130px 200px;
 }
@@ -356,10 +353,10 @@ section h2 {
 
 .project-card {
   width: 45%;
-  position: relative;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .project-image {
@@ -367,7 +364,6 @@ section h2 {
   height: 250px;
   object-fit: cover;
   transition: filter 0.4s ease-in-out;
-  display: block;
 }
 
 .project-overlay {
@@ -410,11 +406,11 @@ section h2 {
   background-color: #003399;
 }
 
-/* Experience section */
+/* Experience Section */
 .experience-section {
   padding: 100px 200px;
   background-color: #f8f9fc;
-  text-align: left; /* ensure text aligns left */
+  text-align: left;
 }
 
 .experience-heading {
@@ -424,17 +420,11 @@ section h2 {
 }
 
 .experience-card {
-  background-color: #001f4d; /* Dark Royal Blue */
+  background-color: #001f4d;
   color: #d1ecff;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease;
-  text-align: left; /* make sure card content is left aligned */
-}
-
-.experience-card:hover {
-  transform: translateY(-5px);
 }
 
 .experience-duration {
@@ -446,7 +436,6 @@ section h2 {
 .experience-title {
   font-size: 1.6rem;
   color: #ffffff;
-  margin: 0.3rem 0;
 }
 
 .experience-company {
@@ -458,7 +447,6 @@ section h2 {
 .experience-points {
   list-style-type: square;
   padding-left: 1.5rem;
-  margin-bottom: 1.2rem;
 }
 
 .experience-points li {
@@ -466,13 +454,6 @@ section h2 {
   line-height: 1.5;
 }
 
-.experience-skills {
-  font-size: 1rem;
-  color: #f472b6; /* Soft pink for skills */
-  font-weight: 500;
-}
-
-/* Certificates section*/
 /* Certificates Section */
 .certificates-section {
   padding: 3rem 200px;
@@ -481,7 +462,7 @@ section h2 {
 .certificates-heading {
   font-size: 2.2rem;
   margin-bottom: 2rem;
-  color: #1e3a8a; /* Dark royal blue */
+  color: #1e3a8a;
   text-align: left;
 }
 
@@ -492,16 +473,16 @@ section h2 {
 }
 
 .certificate-card {
-  position: relative;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .certificate-image-container {
-  position: relative;
-  width: 100%;
   height: 250px;
+  width: 100%;
+  position: relative;
 }
 
 .certificate-image {
@@ -515,10 +496,10 @@ section h2 {
   position: absolute;
   top: 0;
   left: 0;
+  background-color: rgba(30, 58, 138, 0.7);
+  color: white;
   width: 100%;
   height: 100%;
-  background-color: rgba(30, 58, 138, 0.7); /* Royal blue semi-transparent */
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -541,11 +522,9 @@ section h2 {
   line-height: 1.4;
 }
 
-
-
 /* Footer */
 .footer {
-  background-color: #0b1a49; /* Dark Royal Blue */
+  background-color: #0b1a49;
   color: #aaf0ff;
   padding: 3rem 200px;
 }
@@ -560,7 +539,6 @@ section h2 {
 .footer-left h3,
 .footer-right h3 {
   font-size: 1.8rem;
-  color: #aaf0ff;
   margin-bottom: 1rem;
 }
 
@@ -578,7 +556,6 @@ section h2 {
 .footer-icon {
   font-size: 1.2rem;
   margin-right: 10px;
-  color: #aaf0ff;
 }
 
 .footer-left a,
@@ -601,4 +578,56 @@ section h2 {
 
 .footer-right li {
   margin-bottom: 0.7rem;
+}
+
+/* 📱 Responsive Fixes */
+@media (max-width: 768px) {
+  .home-content,
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-image,
+  .about-image-rectangle {
+    width: 250px;
+    height: 280px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 0;
+  }
+
+  .skills-heading,
+  .education-heading,
+  .projects-heading,
+  .experience-heading,
+  .certificates-heading {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .projects-section,
+  .education-section,
+  .certificates-section,
+  .experience-section,
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .project-card,
+  .education-card {
+    width: 100%;
+  }
+
+  .certificates-container.three-column {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }

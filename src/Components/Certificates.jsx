@@ -1,10 +1,10 @@
 import React from 'react';
-import cert1 from '../../public/thyroid-certificate.jpg';
-import cert2 from '../../public/data-science-tools.jpg';
-import cert3 from '../../public/Systems-and-usable-security.jpg';
-import cert4 from '../../public/Distributed_System.jpg';
-import cert5 from '../../public/Python-for-data-science.jpg';
-import cert6 from '../../public/internship.jpg';
+import cert1 from '../assets/thyroid-certificate.jpg';
+import cert2 from '../assets/data-science-tools.jpg';
+import cert3 from '../assets/Systems-and-usable-security.jpg';
+import cert4 from '../assets/Distributed_System.jpg';
+import cert5 from '../assets/Python-for-data-science.jpg';
+import cert6 from '../assets/internship.jpg';
 
 
 const certificateData = [

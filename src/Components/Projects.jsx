@@ -1,6 +1,6 @@
 import React from 'react';
-import thyroidImg from '../../public/thyroid.png';
-import plantImg from '../../public/plant.png';
+import thyroidImg from '../assets/thyroid.png';
+import plantImg from '../assets/plant.png';
 
 
 const Projects = () => (

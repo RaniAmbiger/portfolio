@@ -1,5 +1,5 @@
 import React from 'react';
-import myImage from '../../public/last-day.jpg';
+import myImage from '../assets/last-day.jpg';
 import { FaServer, FaCode, FaRobot } from 'react-icons/fa'; // Importing icons
 
 const About = () => {
@@ -8,7 +8,7 @@ const About = () => {
       <div className="about-container">
         <div className="about-image-wrapper">
           <img src={myImage} alt="Rani" className="about-image-rectangle" />
-        </div>
+          </div>
         <div className="about-content">
           <h2 className="about-title">Who Am I?</h2>
           <ul className="about-points">
